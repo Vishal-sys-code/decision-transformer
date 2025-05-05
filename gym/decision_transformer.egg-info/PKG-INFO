@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: decision_transformer
+Version: 0.1
+Requires-Dist: torch
+Requires-Dist: gym
+Requires-Dist: numpy
+Dynamic: requires-dist
