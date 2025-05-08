@@ -4,7 +4,11 @@ import torch.nn as nn
 
 import transformers
 
+<<<<<<< HEAD
 from .model import TrajectoryModel
+=======
+from decision_transformer.models.model import TrajectoryModel
+>>>>>>> 0caea261246b2c69642501716d3715830ac556ec
 from .trajectory_gpt2 import GPT2Model
 
 
