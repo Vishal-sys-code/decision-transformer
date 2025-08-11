@@ -336,7 +336,7 @@ class Block(nn.Module):
         hidden_states = hidden_states + feed_forward_hidden_states
         # hidden_states = hidden_states + self.adapter_ln(self.adapter_mlp(hidden_states))
 
-        outputs = [hidden_states] + outputs
+        outputs = [hidden_states] + list(outputs)
         return outputs  # hidden_states, present, (attentions, cross_attentions)
 
 
@@ -583,12 +583,12 @@ class GPT2Model(GPT2PreTrainedModel):
             self.h[layer].attn.prune_heads(heads)
 
     @add_start_docstrings_to_model_forward(GPT2_INPUTS_DOCSTRING)
-    @add_code_sample_docstrings(
-        tokenizer_class=_TOKENIZER_FOR_DOC,
-        checkpoint="gpt2",
-        output_type=BaseModelOutputWithPastAndCrossAttentions,
-        config_class=_CONFIG_FOR_DOC,
-    )
+    # @add_code_sample_docstrings(
+    #     tokenizer_class=_TOKENIZER_FOR_DOC,
+    #     checkpoint="gpt2",
+    #     output_type=BaseModelOutputWithPastAndCrossAttentions,
+    #     config_class=_CONFIG_FOR_DOC,
+    # )
     def forward(
             self,
             input_ids=None,
