@@ -4,11 +4,16 @@ import torch.nn as nn
 
 import transformers
 
+<<<<<<< HEAD
 # from decision_transformer.models.model import TrajectoryModel
 # from decision_transformer.models.trajectory_gpt2 import GPT2Model
 
 from external.decision_transformer.gym.decision_transformer.models.model import TrajectoryModel
 from external.decision_transformer.gym.decision_transformer.models.trajectory_gpt2 import GPT2Model
+=======
+from .model import TrajectoryModel
+from .trajectory_gpt2 import GPT2Model
+>>>>>>> 8938854d158d0d36f1272b8e8f89eb24f9d90cef
 
 
 class DecisionTransformer(TrajectoryModel):
